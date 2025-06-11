@@ -1,20 +1,51 @@
 package br.com.alura.orgs
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
-import android.widget.Toast
-import androidx.lifecycle.VIEW_MODEL_STORE_OWNER_KEY
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import br.com.alura.orgs.fragments.CalendarioFragment
+import br.com.alura.orgs.fragments.DocumentosFragment
+import br.com.alura.orgs.fragments.FaltasFragment
+import br.com.alura.orgs.fragments.HomeFragment
+import br.com.alura.orgs.fragments.MaterialFragment
+import br.com.alura.orgs.fragments.NotasFragment
+import br.com.alura.orgs.fragments.NoticiasFragment
 
-class MainActivity : Activity(){
+class MainActivity : AppCompatActivity() {
+
+    private fun abrirFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .commit()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Toast.makeText(this, "Bem vindo ao orgs", Toast.LENGTH_SHORT).show()
-        val view = TextView(this)
-        view.setText("Cesta de futas")
-
         setContentView(R.layout.activity_main)
+
+        abrirFragment(HomeFragment()) // Fragmento padrão inicial
+
+        findViewById<View>(R.id.btnHome).setOnClickListener {
+            abrirFragment(HomeFragment())
+        }
+        findViewById<View>(R.id.btnNotas).setOnClickListener {
+            abrirFragment(NotasFragment())
+        }
+        findViewById<View>(R.id.btnFaltas).setOnClickListener {
+            abrirFragment(FaltasFragment())
+        }
+        findViewById<View>(R.id.btnDocumentos).setOnClickListener {
+            abrirFragment(DocumentosFragment())
+        }
+        findViewById<View>(R.id.btnCalendario).setOnClickListener {
+            abrirFragment(CalendarioFragment())
+        }
+        findViewById<View>(R.id.btnMaterial).setOnClickListener {
+            abrirFragment(MaterialFragment())
+        }
+        findViewById<View>(R.id.btnNoticias).setOnClickListener {
+            abrirFragment(NoticiasFragment())
+        }
     }
 }

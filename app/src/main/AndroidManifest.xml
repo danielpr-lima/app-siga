@@ -10,8 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Orgs">
+        android:theme="@style/Theme.Orgs.NoActionBar">
 
+        <!-- Tela inicial: Login -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -20,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Tela principal -->
+        <activity android:name=".MainActivity" />
 
     </application>
 

@@ -7,5 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="fatec_blue">#3B5461</color>
+    <color name="light_gray">#FFDDDDDD</color>
+    <color name="medium_gray">#FFAAAAAA</color>
+    <color name="dark_gray">#FF666666</color>
+    <color name="primary_blue">#FF1976D2</color>
+    <color name="accent_orange">#FFFF9800</color>
+    <color name="fatec_blue">#3C5361</color>
+
 </resources>
