@@ -14,7 +14,6 @@ import br.com.alura.orgs.model.Materia
 import br.com.alura.orgs.model.Notas
 import br.com.alura.orgs.model.Presenca
 
-
 class NotasFragment : Fragment() {
 
     private lateinit var adapter: MateriaAdapter
