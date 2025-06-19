@@ -9,6 +9,7 @@ import br.com.alura.orgs.fragments.DocumentosFragment
 import br.com.alura.orgs.fragments.FaltasFragment
 import br.com.alura.orgs.fragments.HomeFragment
 import br.com.alura.orgs.fragments.MaterialFragment
+import br.com.alura.orgs.fragments.NotasFragment
 //import br.com.alura.orgs.fragments.NotasFragment
 import br.com.alura.orgs.fragments.NoticiasFragment
 
@@ -29,9 +30,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.btnHome).setOnClickListener {
             abrirFragment(HomeFragment())
         }
-//        findViewById<View>(R.id.btnNotas).setOnClickListener {
-//            abrirFragment(NotasFragment())
-//        }
+        findViewById<View>(R.id.btnNotas).setOnClickListener {
+            abrirFragment(NotasFragment())
+        }
         findViewById<View>(R.id.btnFaltas).setOnClickListener {
             abrirFragment(FaltasFragment())
         }

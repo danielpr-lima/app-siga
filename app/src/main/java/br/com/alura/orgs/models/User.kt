@@ -1,33 +1,32 @@
-// File: app/src/main/java/br.com.alura.orgs/models/User.kt
-
 package br.com.alura.orgs.models
 
 import com.google.gson.annotations.SerializedName
 
-data class User( // Esta será a classe principal para o modelo de usuário completo
-    @SerializedName("_id") val id: String, // Mapeia o _id do MongoDB
-    val role: String, // "aluno", "professor", "admin"
+data class User(
+    @SerializedName("_id") val id: String,
+    val role: String,
     val cpf: String,
-    val ra: String?, // Registro acadêmico, pode ser nulo
+    val ra: String?,
     val nome: String,
     val email: String,
-    @SerializedName("curso") val courseId: String?, // ID do curso, mapeia 'curso' do JS
-    val materias: List<MateriaMatriculada>?, // Lista de matérias matriculadas, pode ser nula
-    val fotoPerfil: String?, // URL da foto de perfil, pode ser nulo
+    @SerializedName("curso") val courseId: String?,
+    val materias: List<MateriaMatriculada>?,
+    val fotoPerfil: String?,
     val createdAt: String,
     val updatedAt: String
 )
 
 data class MateriaMatriculada(
-    @SerializedName("_id") val id: String?, // ID do subdocumento, pode ser nulo
-    @SerializedName("materia") val subjectId: String, // ID da matéria referenciada
-    val notas: Notas?, // Pode ser nulo
+    @SerializedName("_id") val id: String?, // ID do subdocumento de matrícula
+    @SerializedName("materia") val materia: Subject?, // <<<<< MUDANÇA CRÍTICA: Agora é do tipo Subject?
+    val notas: Notas?,
     val faltas: Int,
     val presenca: Presenca
+    // Campos 'nome' e 'professor' REMOVIDOS daqui, pois eles estão dentro do objeto 'materia' (Subject)
 )
 
 data class Notas(
-    @SerializedName("_id") val id: String?, // ID do subdocumento de notas, pode ser nulo
+    @SerializedName("_id") val id: String?,
     val P1: Double?,
     val P2: Double?,
     val T: Double?,
@@ -35,7 +34,7 @@ data class Notas(
 )
 
 data class Presenca(
-    @SerializedName("_id") val id: String?, // ID do subdocumento de presença, pode ser nulo
+    @SerializedName("_id") val id: String?,
     val aulasTotais: Int,
     val faltas: Int
 )
