@@ -1,5 +1,3 @@
-// File: app/src/main/java/br/com/alura/orgs.adapter/NotasAdapter.kt
-
 package br.com.alura.orgs.adapter
 
 import android.view.LayoutInflater
@@ -9,6 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.orgs.R
 import br.com.alura.orgs.models.MateriaMatriculada
+import br.com.alura.orgs.models.Notas
+import br.com.alura.orgs.models.Subject
 
 class NotasAdapter(private val materias: List<MateriaMatriculada>) :
     RecyclerView.Adapter<NotasAdapter.ViewHolder>() {
@@ -20,7 +20,8 @@ class NotasAdapter(private val materias: List<MateriaMatriculada>) :
         val notaP2: TextView = view.findViewById(R.id.item_materia_nota_p2)
         val notaT: TextView = view.findViewById(R.id.item_materia_nota_t)
         val notaP3: TextView = view.findViewById(R.id.item_materia_nota_p3)
-        val faltas: TextView = view.findViewById(R.id.item_materia_faltas)
+        val media: TextView = view.findViewById(R.id.item_materia_media)
+        // REMOVIDO: val faltas: TextView = view.findViewById(R.id.item_materia_faltas)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,8 +33,6 @@ class NotasAdapter(private val materias: List<MateriaMatriculada>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val materiaMatriculada = materias[position]
 
-        // Nome da matéria e professor (estes campos vêm de 'populate' no backend)
-        // O campo 'materia' na MateriaMatriculada é um Subject populado
         holder.nomeMateria.text = materiaMatriculada.materia?.nome ?: "Matéria Desconhecida"
         holder.nomeProfessor.text = "Professor: ${materiaMatriculada.materia?.professor?.nome ?: "Não informado"}"
 
@@ -43,11 +42,31 @@ class NotasAdapter(private val materias: List<MateriaMatriculada>) :
         holder.notaT.text = "T: ${materiaMatriculada.notas?.T?.toString() ?: "-"}"
         holder.notaP3.text = "P3: ${materiaMatriculada.notas?.P3?.toString() ?: "-"}"
 
-        // Faltas
-        holder.faltas.text = "Faltas: ${materiaMatriculada.faltas} de ${materiaMatriculada.presenca.aulasTotais} aulas"
+        // Cálculo da Média
+        val mediaCalculada = calcularMedia(materiaMatriculada.notas)
+        holder.media.text = "Média: ${String.format("%.1f", mediaCalculada)}"
+
+        // REMOVIDO: Lógica para exibir faltas
+        // holder.faltas.text = "Faltas: ${materiaMatriculada.faltas} de ${materiaMatriculada.presenca.aulasTotais} aulas"
     }
 
     override fun getItemCount(): Int {
         return materias.size
+    }
+
+    private fun calcularMedia(notas: Notas?): Double {
+        if (notas == null) return 0.0
+
+        val listaNotasValidas = mutableListOf<Double>()
+        notas.P1?.let { listaNotasValidas.add(it) }
+        notas.P2?.let { listaNotasValidas.add(it) }
+        notas.T?.let { listaNotasValidas.add(it) }
+        notas.P3?.let { listaNotasValidas.add(it) }
+
+        return if (listaNotasValidas.isNotEmpty()) {
+            listaNotasValidas.average()
+        } else {
+            0.0
+        }
     }
 }

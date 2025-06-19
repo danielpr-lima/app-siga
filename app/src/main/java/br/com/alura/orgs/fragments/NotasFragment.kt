@@ -1,5 +1,3 @@
-// File: app/src/main/java/br.com.alura.orgs.fragments/NotasFragment.kt
-
 package br.com.alura.orgs.fragments
 
 import android.content.Context
@@ -16,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.orgs.R
 import br.com.alura.orgs.adapter.NotasAdapter
-import br.com.alura.orgs.api.RetrofitInitializer // Importe seu RetrofitInitializer
+import br.com.alura.orgs.api.RetrofitInitializer
 import kotlinx.coroutines.launch
 
 class NotasFragment : Fragment() {
