@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.btnCalendario).setOnClickListener {
             abrirFragment(CalendarioFragment())
         }
-        findViewById<View>(R.id.btnMaterial).setOnClickListener {
+        findViewById<View>(R.id.btnUser).setOnClickListener {
             abrirFragment(MaterialFragment())
         }
         findViewById<View>(R.id.btnNoticias).setOnClickListener {

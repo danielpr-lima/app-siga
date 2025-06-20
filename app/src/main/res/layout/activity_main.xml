@@ -91,7 +91,7 @@
             />
 
         <ImageView
-            android:id="@+id/btnMaterial"
+            android:id="@+id/btnUser"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"

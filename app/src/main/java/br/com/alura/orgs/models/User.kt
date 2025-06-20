@@ -38,3 +38,4 @@ data class Presenca(
     val aulasTotais: Int,
     val faltas: Int
 )
+
