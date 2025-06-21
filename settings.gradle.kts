@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Orgs"
+rootProject.name = "Fatec Siga"
 include(":app")
