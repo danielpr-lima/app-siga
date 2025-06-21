@@ -105,7 +105,8 @@ class LoginActivity : AppCompatActivity() {
         val input = EditText(this)
         input.hint = "Digite seu CPF ou E-mail"
 
-         input.setHintTextColor(ContextCompat.getColor(this, R.color.dialog_edittext_hint)) // Se o estilo falhar, ative isso temporariamente
+        input.setHintTextColor(ContextCompat.getColor(this, R.color.dialog_edittext_hint)) // Se o estilo falhar, ative isso temporariamente
+        input.setTextColor(ContextCompat.getColor(this, R.color.dialog_edittext_hint)) // Se o estilo falhar, ative isso temporariamente
 
 
         builder.setView(input)
