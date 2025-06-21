@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import br.com.alura.orgs.fragments.CalendarioFragment
 import br.com.alura.orgs.fragments.DocumentosFragment
 import br.com.alura.orgs.fragments.FaltasFragment
-import br.com.alura.orgs.fragments.HomeFragment
-import br.com.alura.orgs.fragments.MaterialFragment
+//import br.com.alura.orgs.fragments.HomeFragment
+import br.com.alura.orgs.fragments.UserFragment
 import br.com.alura.orgs.fragments.NotasFragment
 //import br.com.alura.orgs.fragments.NotasFragment
 import br.com.alura.orgs.fragments.NoticiasFragment
@@ -25,11 +25,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        abrirFragment(HomeFragment()) // Fragmento padrão inicial
+        abrirFragment(NotasFragment()) // Fragmento padrão inicial
 
-        findViewById<View>(R.id.btnHome).setOnClickListener {
-            abrirFragment(HomeFragment())
-        }
+//        findViewById<View>(R.id.btnHome).setOnClickListener {
+//            abrirFragment(HomeFragment())
+//        }
         findViewById<View>(R.id.btnNotas).setOnClickListener {
             abrirFragment(NotasFragment())
         }
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             abrirFragment(CalendarioFragment())
         }
         findViewById<View>(R.id.btnUser).setOnClickListener {
-            abrirFragment(MaterialFragment())
+            abrirFragment(UserFragment())
         }
         findViewById<View>(R.id.btnNoticias).setOnClickListener {
             abrirFragment(NoticiasFragment())

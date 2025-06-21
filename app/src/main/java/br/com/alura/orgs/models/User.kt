@@ -9,12 +9,14 @@ data class User(
     val ra: String?,
     val nome: String,
     val email: String,
-    @SerializedName("curso") val courseId: String?,
+    @SerializedName("curso") val curso: Course?,
     val materias: List<MateriaMatriculada>?,
     val fotoPerfil: String?,
     val createdAt: String,
     val updatedAt: String
-)
+) {
+
+}
 
 data class MateriaMatriculada(
     @SerializedName("_id") val id: String?, // ID do subdocumento de matrícula

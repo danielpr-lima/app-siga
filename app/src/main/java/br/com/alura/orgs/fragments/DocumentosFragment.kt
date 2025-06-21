@@ -71,7 +71,7 @@ class DocumentosFragment : Fragment() {
         val newStatus = "Pendente"
         val currentTime = SimpleDateFormat("dd/MM/yyyy - HH:mm", Locale.getDefault()).format(Date())
 
-        // Salvar status e data em SharedPreferences
+        // Salva status e data em SharedPreferences
         val prefs = requireActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         with(prefs.edit()) {
             putString(KEY_STATUS, newStatus)
@@ -83,14 +83,5 @@ class DocumentosFragment : Fragment() {
         loadDocumentStatus()
         Toast.makeText(context, "Solicitação de comprovante enviada!", Toast.LENGTH_SHORT).show()
 
-        // TODO: (Opcional) Simular um "concluído" após algum tempo para demonstração
-        // Handler().postDelayed({
-        //     with(prefs.edit()) {
-        //         putString(KEY_STATUS, "Concluído")
-        //         apply()
-        //     }
-        //     loadDocumentStatus()
-        //     Toast.makeText(context, "Seu comprovante está pronto para download!", Toast.LENGTH_LONG).show()
-        // }, 5000) // 5 segundos
     }
 }

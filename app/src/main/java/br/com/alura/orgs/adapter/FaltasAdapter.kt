@@ -32,7 +32,7 @@ class FaltasAdapter(private val materias: List<MateriaMatriculada>) :
         holder.nomeProfessor.text = "Professor: ${materiaMatriculada.materia?.professor?.nome ?: "Não informado"}"
 
         val totalFaltas = materiaMatriculada.faltas
-        val aulasTotais = materiaMatriculada.presenca.aulasTotais // Aulas totais são obrigatórias, então não precisa de '?'
+        val aulasTotais = materiaMatriculada.presenca.aulasTotais
         val percentualFaltas = if (aulasTotais > 0) (totalFaltas.toDouble() / aulasTotais) * 100 else 0.0
 
         val faltasText = "Faltas: $totalFaltas de $aulasTotais aulas (${String.format("%.1f", percentualFaltas)}%)"
