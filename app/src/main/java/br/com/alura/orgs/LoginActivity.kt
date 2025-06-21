@@ -5,8 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import br.com.alura.orgs.models.LoginRequest
 import br.com.alura.orgs.models.User // Importe a data class User (completa)
@@ -25,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
         val editLogin = findViewById<EditText>(R.id.editLogin)
         val editSenha = findViewById<EditText>(R.id.editSenha)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val textRedefinir = findViewById<TextView>(R.id.textRedefinir)
 
         btnLogin.setOnClickListener {
             val cpf = editLogin.text.toString().trim()
@@ -87,6 +91,43 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Preencha o CPF e a senha.", Toast.LENGTH_SHORT).show()
             }
         }
+        textRedefinir.setOnClickListener {
+            showResetPasswordDialog()
+        }
+    }
+
+    private fun showResetPasswordDialog() {
+        // *** AQUI É ONDE VOCÊ APLICA O TEMA ***
+        val builder = AlertDialog.Builder(this, R.style.AlertDialogCustomTheme) // <--- ADICIONE R.style.AlertDialogCustomTheme
+
+        builder.setTitle("Redefinir Senha")
+
+        val input = EditText(this)
+        input.hint = "Digite seu CPF ou E-mail"
+
+         input.setHintTextColor(ContextCompat.getColor(this, R.color.dialog_edittext_hint)) // Se o estilo falhar, ative isso temporariamente
+
+
+        builder.setView(input)
+
+
+        builder.setView(input)
+
+        builder.setPositiveButton("Redefinir") { dialog, _ ->
+            val identification = input.text.toString().trim()
+            if (identification.isNotEmpty()) {
+                Toast.makeText(this, "Instruções de redefinição enviadas para o email vinculado ${identification} .", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, "Por favor, digite seu CPF ou E-mail.", Toast.LENGTH_SHORT).show()
+            }
+            dialog.dismiss()
+        }
+
+        builder.setNegativeButton("Cancelar") { dialog, _ ->
+            dialog.cancel()
+        }
+
+        builder.show()
     }
 
     // Funções saveAuthToken, saveUserId, saveUserRole, saveUserName permanecem as mesmas
