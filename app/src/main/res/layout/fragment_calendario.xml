@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.CalendarioFragment"
-    android:background="#F2EFE7"
+    android:background="@color/bg_fregment"
     android:padding="16dp">
 
     <TextView

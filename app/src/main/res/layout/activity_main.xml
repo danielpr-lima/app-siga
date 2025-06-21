@@ -6,53 +6,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Menu lateral fixo -->
     <LinearLayout
         android:id="@+id/menuLateral"
         android:layout_width="72dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#EEEEEE"
+        android:background="@color/bg_menu"
         android:paddingTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-
-        <View
-            android:id="@+id/circleBlack"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:background="@drawable/circulo_preto"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="-70dp"
-            android:layout_marginStart="-60dp"
-            app:layout_constraintHorizontal_bias="1.1" />
+        <View android:id="@+id/circleBlack" android:layout_width="130dp" android:layout_height="130dp" android:background="@drawable/circulo_preto" android:layout_marginTop="-70dp" android:layout_marginStart="-60dp" />
+        <View android:id="@+id/circleRed" android:layout_width="130dp" android:layout_height="130dp" android:background="@drawable/circulo_vermelho" android:layout_marginTop="-70dp" android:layout_marginStart="-100dp" />
 
 
-        <!-- Círculo Vermelho -->
-        <View
-            android:id="@+id/circleRed"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:background="@drawable/circulo_vermelho"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="-70dp"
-            android:layout_marginStart="-100dp" />
-
-        <!-- Ícones do menu -->
+        <ImageView
+            android:id="@+id/btnUsuario"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/bg_menu_botao"
+            app:srcCompat="@drawable/ic_usuario" />
         <ImageView
             android:id="@+id/btnHome"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/bg_menu_botao"
-            />
+            android:padding="3dp"
+            app:srcCompat="@drawable/ic_home" />
 
         <ImageView
             android:id="@+id/btnNotas"
@@ -61,8 +47,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="12dp"
             android:background="@drawable/bg_menu_botao"
-            />
-
+            app:srcCompat="@drawable/ic_notas"
+            android:padding="4dp"/>
         <ImageView
             android:id="@+id/btnFaltas"
             android:layout_width="48dp"
@@ -70,8 +56,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="12dp"
             android:background="@drawable/bg_menu_botao"
-            />
-
+            android:padding="3dp"
+             app:srcCompat="@drawable/ic_faltas" />
         <ImageView
             android:id="@+id/btnDocumentos"
             android:layout_width="48dp"
@@ -79,8 +65,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="12dp"
             android:background="@drawable/bg_menu_botao"
-            />
-
+            app:srcCompat="@drawable/ic_documento" />
         <ImageView
             android:id="@+id/btnCalendario"
             android:layout_width="48dp"
@@ -88,28 +73,10 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="12dp"
             android:background="@drawable/bg_menu_botao"
-            />
+            app:srcCompat="@drawable/ic_calendario" />
 
-        <ImageView
-            android:id="@+id/btnUser"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/bg_menu_botao"
-            />
-
-        <ImageView
-            android:id="@+id/btnNoticias"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/bg_menu_botao"
-            />
     </LinearLayout>
 
-    <!-- Container para os fragments -->
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="0dp"

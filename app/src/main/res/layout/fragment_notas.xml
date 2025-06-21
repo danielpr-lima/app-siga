@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.NotasFragment"
-    android:background="#F2EFE7"> <TextView
+    android:background="@color/bg_fregment">
+
+
+    <TextView
     android:id="@+id/notas_titulo"
     android:layout_width="0dp"
     android:layout_height="wrap_content"

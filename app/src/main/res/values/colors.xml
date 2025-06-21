@@ -13,5 +13,11 @@
     <color name="primary_blue">#FF1976D2</color>
     <color name="accent_orange">#FFFF9800</color>
     <color name="fatec_blue">#3C5361</color>
+    <color name="bg_fregment">#F2EFE7</color>
+    <color name="bg_menu">#939393 </color>
+    <color name="menu_button_default_background">#F2EFE7</color>
+    <color name="menu_button_selected_background">#3C5361</color>
+    <color name="menu_icon_default">#3C5361</color>
+    <color name="menu_icon_selected">#F2EFE7</color>
 
 </resources>
