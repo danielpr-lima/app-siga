@@ -99,28 +99,28 @@ Para colocar o aplicativo SIGA em funcionamento em seu ambiente de desenvolvimen
             // ...
             ```
 
-           ### 4.2. Configuração do Banco de Dados (População de Dados de Teste)
+        **4.2. Configuração do Banco de Dados (População de Dados de Teste)**
 
-            Para facilitar os testes e ter um ambiente pré-populado com dados de exemplo (curso, matérias e um aluno com senha hasheada), siga os passos abaixo para importar os dados para o MongoDB.
+        Para facilitar os testes e ter um ambiente pré-populado com dados de exemplo (curso, matérias e um aluno com senha hasheada), siga os passos abaixo para importar os dados para o MongoDB.
 
-            Os arquivos JSON de dados de teste (`courses.json`, `subjects.json`, `users.json`) estão localizados na pasta `app/database_seed/` do seu repositório.
+        Os arquivos JSON de dados de teste (`courses.json`, `subjects.json`, `users.json`) estão localizados na pasta `app/database_seed/` do seu repositório.
 
-            1.  **Limpe as coleções existentes (OPCIONAL, mas recomendado para evitar conflitos de IDs):**
-                * Abra o MongoDB Compass, conecte-se ao `siga_db`.
-                * Para cada coleção (`courses`, `subjects`, `users`), clique nos três pontos ao lado do nome da coleção e selecione "Drop Collection" (para apagar tudo) ou "Delete All Documents".
+        1.  **Limpe as coleções existentes (OPCIONAL, mas recomendado para evitar conflitos de IDs):**
+            * Abra o MongoDB Compass, conecte-se ao `siga_db`.
+            * Para cada coleção (`courses`, `subjects`, `users`), clique nos três pontos ao lado do nome da coleção e selecione "Drop Collection" (para apagar tudo) ou "Delete All Documents".
 
-            2.  **Importe os dados de teste:**
-                * Para cada arquivo JSON localizado em `app/database_seed/`:
-                    * No MongoDB Compass, selecione o banco de dados `siga_db`.
-                    * Clique na coleção correspondente (`courses`, `subjects` ou `users`).
-                    * Clique no botão "Add Data" e selecione **"Import File"**.
-                    * Navegue e selecione o arquivo JSON apropriado (ex: `app/database_seed/courses.json`).
-                    * Em "File type", selecione **`JSON`**.
-                    * Clique em "Import".
+        2.  **Importe os dados de teste:**
+            * Para cada arquivo JSON localizado em `app/database_seed/`:
+                * No MongoDB Compass, selecione o banco de dados `siga_db`.
+                * Clique na coleção correspondente (`courses`, `subjects` ou `users`).
+                * Clique no botão "Add Data" e selecione **"Import File"**.
+                * Navegue e selecione o arquivo JSON apropriado (ex: `app/database_seed/courses.json`).
+                * Em "File type", selecione **`JSON`**.
+                * Clique em "Import".
 
-            3.  **Credenciais do Aluno de Teste:**
-                * Após a importação, o aluno de teste com o CPF `12345678909` e a senha `123` (já hasheada no banco de dados) estará disponível para login.
-                
+        3.  **Credenciais do Aluno de Teste:**
+            * Após a importação, o aluno de teste com o CPF `12345678909` e a senha `123` (já hasheada no banco de dados) estará disponível para login.
+            
 5.  **Configure o Ngrok (para testes com dispositivo físico):**
     * Baixe e autentique o ngrok (`ngrok authtoken SEU_TOKEN`).
     * Inicie o túnel: `ngrok http 3000`.
@@ -141,13 +141,3 @@ Para colocar o aplicativo SIGA em funcionamento em seu ambiente de desenvolvimen
 
 9.  **Execute o aplicativo:** Conecte seu dispositivo Android ou inicie um emulador e clique no botão `Run` (triângulo verde) no Android Studio.
 
-## 🤝 Contribuição e Futuras Evoluções
-
-Este projeto é um ponto de partida sólido para um Sistema de Gestão Acadêmica mobile. Algumas melhorias e evoluções futuras podem incluir:
-
-* **Autenticação Reforçada:** Implementação de autenticação com banco de dados no próprio app (cadastro de usuários, recuperação de senha real via e-mail).
-* **Integração Completa da API:** Expandir o consumo da API para outras seções (Material, Notícias, Documentos, Calendário) com dados dinâmicos.
-* **Notificações Push:** Para lembretes de prazos, eventos e avisos importantes.
-* **Gerenciamento de Cache:** Estratégias de cache para melhorar o desempenho e o uso offline.
-* **Modo Escuro (Dark Mode):** Implementação de tema escuro para melhor experiência do usuário.
-* **Área para Professores:** Extensão do aplicativo para incluir funcionalidades para o papel de professor.
