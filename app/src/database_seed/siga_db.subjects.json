@@ -1,0 +1,154 @@
+[{
+  "_id": {
+    "$oid": "6853ac030e40928b6e35d34c"
+  },
+  "nome": "Algoritmos e Lógica de Programação",
+  "codigo": "ADS101",
+  "descricao": "Introdução aos conceitos de algoritmos e lógica de programação.",
+  "cargaHoraria": 80,
+  "professor": {
+    "nome": "Ana Oliveira",
+    "email": "ana.oliveira@universidade.com"
+  },
+  "semestre": 4,
+  "preRequisitos": [],
+  "createdAt": {
+    "$date": "2025-06-19T06:19:47.720Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T06:19:47.722Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853ac110e40928b6e35d34f"
+  },
+  "nome": "Desenvolvimento Web",
+  "codigo": "ADS102",
+  "descricao": "Desenvolvimento de aplicações web utilizando HTML, CSS e JavaScript.",
+  "cargaHoraria": 100,
+  "professor": {
+    "nome": "Bruno Silva",
+    "email": "bruno.silva@universidade.com"
+  },
+  "semestre": 4,
+  "preRequisitos": [],
+  "createdAt": {
+    "$date": "2025-06-19T06:20:01.027Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T06:20:01.028Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853ac150e40928b6e35d352"
+  },
+  "nome": "Banco de Dados",
+  "codigo": "ADS103",
+  "descricao": "Modelagem de dados e utilização de sistemas de gerenciamento de banco de dados.",
+  "cargaHoraria": 100,
+  "professor": {
+    "nome": "Camila Souza",
+    "email": "camila.souza@universidade.com"
+  },
+  "semestre": 4,
+  "preRequisitos": [],
+  "createdAt": {
+    "$date": "2025-06-19T06:20:05.401Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T06:20:05.402Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853ac1e0e40928b6e35d355"
+  },
+  "nome": "Programação Orientada a Objetos",
+  "codigo": "ADS104",
+  "descricao": "Conceitos de orientação a objetos aplicados à programação.",
+  "cargaHoraria": 80,
+  "professor": {
+    "nome": "Daniel Pereira",
+    "email": "daniel.pereira@universidade.com"
+  },
+  "semestre": 4,
+  "preRequisitos": [],
+  "createdAt": {
+    "$date": "2025-06-19T06:20:14.364Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T06:20:14.365Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853ac240e40928b6e35d358"
+  },
+  "nome": "Engenharia de Software",
+  "codigo": "ADS105",
+  "descricao": "Processos, métodos e ferramentas no desenvolvimento de software.",
+  "cargaHoraria": 80,
+  "professor": {
+    "nome": "Elaine Martins",
+    "email": "elaine.martins@universidade.com"
+  },
+  "semestre": 4,
+  "preRequisitos": [],
+  "createdAt": {
+    "$date": "2025-06-19T06:20:20.796Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T06:20:20.797Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853ac2a0e40928b6e35d35b"
+  },
+  "nome": "Desenvolvimento Mobile",
+  "codigo": "ADS106",
+  "descricao": "Desenvolvimento de aplicativos móveis para plataformas Android e iOS.",
+  "cargaHoraria": 100,
+  "professor": {
+    "nome": "Fernando Costa",
+    "email": "fernando.costa@universidade.com"
+  },
+  "semestre": 4,
+  "preRequisitos": [],
+  "createdAt": {
+    "$date": "2025-06-19T06:20:26.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T06:20:26.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853ac2f0e40928b6e35d35e"
+  },
+  "nome": "Estrutura de Dados",
+  "codigo": "ADS107",
+  "descricao": "Estudo de estruturas de dados fundamentais e algoritmos associados.",
+  "cargaHoraria": 100,
+  "professor": {
+    "nome": "Gabriela Lima",
+    "email": "gabriela.lima@universidade.com"
+  },
+  "semestre": 4,
+  "preRequisitos": [],
+  "createdAt": {
+    "$date": "2025-06-19T06:20:31.501Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T06:20:31.502Z"
+  },
+  "__v": 0
+}]

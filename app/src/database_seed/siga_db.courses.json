@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "650000000000000000000001"
+  },
+  "nome": "Desenvolvimento de Software Multiplataforma",
+  "codigo": "DSM",
+  "descricao": "Curso focado no desenvolvimento de sistemas multiplataforma, abrangendo mobile, web e desktop.",
+  "duracao": 6,
+  "coordenador": {
+    "nome": "Carlos Henrique",
+    "email": "carlos.henrique@universidade.com"
+  },
+  "materias": [
+    {
+      "$oid": "6853ac030e40928b6e35d34c"
+    },
+    {
+      "$oid": "6853ac110e40928b6e35d34f"
+    },
+    {
+      "$oid": "6853ac150e40928b6e35d352"
+    },
+    {
+      "$oid": "6853ac1e0e40928b6e35d355"
+    },
+    {
+      "$oid": "6853ac240e40928b6e35d358"
+    },
+    {
+      "$oid": "6853ac2a0e40928b6e35d35b"
+    },
+    {
+      "$oid": "6853ac2f0e40928b6e35d35e"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-06-19T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T00:00:00.000Z"
+  }
+}]

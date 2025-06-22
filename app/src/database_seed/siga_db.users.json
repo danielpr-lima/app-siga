@@ -1,0 +1,135 @@
+[{
+  "_id": {
+    "$oid": "6856e039a56119b0b66eb52c"
+  },
+  "role": "aluno",
+  "cpf": "12345678909",
+  "senha": "$2a$10$c/rLLxs889g5VBbUWJmiRe0nyPL7SUZ88778dHt9TaH/vl2NLsU2u",
+  "ra": "DSM2025001",
+  "nome": "Lucas Almeida",
+  "email": "lucas.almeida@aluno.com",
+  "curso": {
+    "$oid": "650000000000000000000001"
+  },
+  "materias": [
+    {
+      "materia": {
+        "$oid": "6853ac030e40928b6e35d34c"
+      },
+      "notas": {
+        "P1": 7.5,
+        "P2": 8,
+        "T": 9,
+        "P3": null
+      },
+      "faltas": 1,
+      "presenca": {
+        "aulasTotais": 80,
+        "faltas": 1
+      }
+    },
+    {
+      "materia": {
+        "$oid": "6853ac110e40928b6e35d34f"
+      },
+      "notas": {
+        "P1": 6,
+        "P2": 7,
+        "T": 7.5,
+        "P3": null
+      },
+      "faltas": 2,
+      "presenca": {
+        "aulasTotais": 100,
+        "faltas": 2
+      }
+    },
+    {
+      "materia": {
+        "$oid": "6853ac150e40928b6e35d352"
+      },
+      "notas": {
+        "P1": 8.5,
+        "P2": 9,
+        "T": 8,
+        "P3": null
+      },
+      "faltas": 0,
+      "presenca": {
+        "aulasTotais": 100,
+        "faltas": 0
+      }
+    },
+    {
+      "materia": {
+        "$oid": "6853ac1e0e40928b6e35d355"
+      },
+      "notas": {
+        "P1": 7,
+        "P2": 6.5,
+        "T": 7,
+        "P3": null
+      },
+      "faltas": 1,
+      "presenca": {
+        "aulasTotais": 80,
+        "faltas": 1
+      }
+    },
+    {
+      "materia": {
+        "$oid": "6853ac240e40928b6e35d358"
+      },
+      "notas": {
+        "P1": 9,
+        "P2": 8.5,
+        "T": 9.5,
+        "P3": null
+      },
+      "faltas": 0,
+      "presenca": {
+        "aulasTotais": 80,
+        "faltas": 0
+      }
+    },
+    {
+      "materia": {
+        "$oid": "6853ac2a0e40928b6e35d35b"
+      },
+      "notas": {
+        "P1": 7,
+        "P2": 7,
+        "T": 6.5,
+        "P3": null
+      },
+      "faltas": 3,
+      "presenca": {
+        "aulasTotais": 100,
+        "faltas": 3
+      }
+    },
+    {
+      "materia": {
+        "$oid": "6853ac2f0e40928b6e35d35e"
+      },
+      "notas": {
+        "P1": 8,
+        "P2": 9,
+        "T": 8.5,
+        "P3": null
+      },
+      "faltas": 0,
+      "presenca": {
+        "aulasTotais": 100,
+        "faltas": 0
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-06-19T21:45:24.198Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T21:45:24.358Z"
+  },
+  "__v": 0
+}]
